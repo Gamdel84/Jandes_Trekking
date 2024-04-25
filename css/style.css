@@ -363,9 +363,9 @@ hr{
 
 .footer{
     background-color: #000000;
-    height: 60px;
+    height: 70px;
     bottom: 0;
-    position: sticky;
+    /*position: sticky;*/
     
     ul{
         display: flex;
@@ -408,7 +408,7 @@ hr{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 992px;
+    height:992px;
     margin: 0;
     padding: 0;
     display: flex;
@@ -826,141 +826,92 @@ hr{
         }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
-    body {
-        background-image: none; /* Eliminar el fondo de imagen en pantallas pequeñas */
-        background-color: rgb(143, 213, 143); /* Cambiar el color de fondo */
-    }
-
     .header {
-        min-height: auto; /* Reducir la altura del encabezado */
+        max-height: 40vh;
+        margin-top: 10px;
+        padding-top: 0;
     }
 
     .nav1, .nav2 {
-        flex-direction: column; /* Cambiar la dirección de la navegación para dispositivos móviles */
-        align-items: center; /* Centrar los elementos */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .nav1 .aico i {
-        padding: 10px; /* Reducir el espacio entre el ícono y el texto */
+        padding: 10px; 
     }
 
     .navul {
-        flex-direction: column; /* Cambiar la dirección de la lista de navegación */
-        align-items: center; /* Centrar los elementos */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .navli {
-        margin-bottom: 10px; /* Agregar espacio entre elementos de navegación */
+        margin-bottom: 10px; 
     }
 
     .navlia, .navliaini {
-        font-size: 1.2rem; /* Reducir el tamaño del texto de navegación */
+        font-size: 1.2rem; 
     }
 
     .aventuras .h1, .titulos2, .titulos3 {
-        font-size: 2rem; /* Reducir el tamaño del texto en las secciones de aventuras */
+        font-size: 2rem; 
     }
 
     .formbuscar {
-        flex-direction: column; /* Cambiar la dirección del formulario de búsqueda */
-        align-items: center; /* Centrar los elementos */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .buscaventura {
-        width: 80%; /* Ajustar el ancho del campo de búsqueda */
+        width: 80%; 
     }
 
     .botonbusca {
-        width: 50%; /* Ajustar el ancho del botón de búsqueda */
-        margin-top: 10px; /* Agregar espacio entre el campo de búsqueda y el botón */
+        width: 50%; 
+        margin-top: 10px; 
     }
 
     .actividades .galeria {
-        width: 90%; /* Ajustar el ancho de la galería de actividades */
+        width: 90%; 
     }
 
     .actividad {
-        width: 45%; /* Ajustar el ancho de cada actividad en la galería */
-        margin-bottom: 20px; /* Agregar espacio entre las actividades */
+        width: 45%; 
+        margin-bottom: 20px; 
     }
 
     .actividad .imgactividad {
-        box-shadow: none; /* Eliminar la sombra en las imágenes */
+        box-shadow: none; 
     }
 
     .actividad .nombreact {
-        font-size: 1.5rem; /* Reducir el tamaño del nombre de la actividad */
+        font-size: 1.5rem; 
+    }
+
+    .nosotros{
+        height: auto;
+    }
+
+    .laempresa{
+        font-size: 1rem;
     }
 
     .footer ul {
-        flex-direction: column; /* Cambiar la dirección de la lista de enlaces en el pie de página */
-        align-items: center; /* Centrar los elementos */
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .titulos2{
+        font-size: 1.5rem;
+    }
+
+    .promociones{
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 370px;
     }
 }
 
-/* Estilos para pantallas pequeñas (móviles) */
-@media screen and (max-width: 480px) {
-    .nav1 .aico i {
-        width: 2rem; /* Reducir el tamaño del ícono en dispositivos móviles */
-    }
-
-    .navlia, .navliaini {
-        font-size: 1rem; /* Reducir el tamaño del texto de navegación en dispositivos móviles */
-    }
-
-    .aventuras .h1, .titulos2, .titulos3 {
-        font-size: 1.5rem; /* Reducir el tamaño del texto en las secciones de aventuras en dispositivos móviles */
-    }
-
-    .formbuscar {
-        align-items: flex-start; /* Alinear el formulario de búsqueda a la izquierda */
-    }
-
-    .buscaventura {
-        width: 90%; /* Ajustar el ancho del campo de búsqueda en dispositivos móviles */
-    }
-
-    .botonbusca {
-        width: 90%; /* Ajustar el ancho del botón de búsqueda en dispositivos móviles */
-    }
-
-    .actividades .galeria {
-        width: 100%; /* Ajustar el ancho de la galería de actividades en dispositivos móviles */
-    }
-
-    .actividad {
-        width: 90%; /* Ajustar el ancho de cada actividad en la galería en dispositivos móviles */
-    }
-
-    .actividad .imgactividad .nombreact {
-        font-size: 1.2rem; /* Reducir el tamaño del nombre de la actividad en dispositivos móviles */
-    }
-
-    .footer ul {
-        align-items: center; /* Centrar los elementos en la lista de enlaces en dispositivos móviles */
-    }
-}
-@media screen and (max-width: 768px) {
-    .pack {
-        width: 100%; /* Ajusta el ancho para que cada div ocupe toda la pantalla en dispositivos móviles */
-    }
-}
