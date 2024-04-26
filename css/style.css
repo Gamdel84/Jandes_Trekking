@@ -11,15 +11,6 @@
 body{
     margin: 0;
     padding: 0;
-    /*background-image: linear-gradient(
-        0deg, 
-        rgba(0,0,0,0.6),
-        rgba(0,0,0,0.6)
-    ) ,url(../assets/img/P1020311.JPG);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center;*/
-    z-index: 1;
     .promociones::-webkit-scrollbar{
         width: 10px;
         border-radius: 10px;
@@ -85,9 +76,24 @@ body::-webkit-scrollbar-track{
                 color:rgb(26, 121, 194);
                 padding: 0 20px;
                 text-decoration: none;
+                animation: social both 10s ease  infinite;
             }     
             
             
+    }
+    @keyframes social{
+        0%{
+            
+            color: rgb(231, 231, 179);
+        }
+        50%{
+            
+            color: rgb(45, 107, 232);
+        }
+        100%{
+            
+            color: rgb(11, 14, 16);
+        }
     }
 
     .nav2{
@@ -248,20 +254,22 @@ body::-webkit-scrollbar-track{
     margin: 15px;
     border-radius: 10px; 
     border-color: #4c068f;
-    width: 20rem; 
-    
+    width: 20rem;   
 }
+
+
 
 .botonbusca{
    display: inline;
-   padding: 13px 0 13px 0;
+   padding: 16px;
    color: #4c068f;
    font-size: 1.5rem;
-   border-radius: 50px 50px 50px 50px;
+   border-radius: 100%;
    border-color: #4c068f;
    background-color: rgb(134, 216, 134);
-   box-shadow: rgb(151, 86, 237) 0px -4px 0 0px; 
+   box-shadow: rgb(151, 86, 237) 0px 0px 25px 0px; 
 }
+
 
 hr{
     margin: 0px 0px;
@@ -347,19 +355,44 @@ hr{
 
 }
 
+
+
 .button{
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
     button{
+        position: relative;
         width: 900;
         margin: 10px 10px;
+        padding: 5px;
         font-size: 1.2rem;
         color: #d57826;
-        border-radius: 5px;
+        border-radius: 16px;
+        border-color:linear-gradient(#810a81, #d30057, #ed5604, #cba800, #5eeb12);
+        cursor: pointer;
+        animation: boton alternate 1s linear infinite;
     }
-   
-}
+    
+        @keyframes boton{
+            0%{
+                border-color: blue;
+                color: black;
+            }
+            50%{
+                border-color: green;
+                color: red;
+            }
+            100%{
+                border-color: indigo;
+                color: brown;
+            }
+        
+        }
+
 
 .footer{
     background-color: #000000;
@@ -621,7 +654,7 @@ hr{
     align-items: flex-end;
     width: auto;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: #a69907;
     margin: 30px;
 
@@ -679,7 +712,7 @@ hr{
 .detallePromo{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-image: linear-gradient(
         0deg, 
@@ -689,20 +722,18 @@ hr{
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
-    z-index: 10;
     margin: 0;
 }
 
 
 .detalleFoto{
     display:block;
-    unicode-bidi: isolate;
     img{
         border-radius: 16px;
         width: 300px;
         height: 500px;
         object-fit:cover;
-        z-index: 1;
+       
     }
 }
 
@@ -710,17 +741,17 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 50%;
     margin-bottom: 100px;
     
     h2{
         color: rgb(238, 78, 78);
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
    
     p{
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: #6392f7;
         text-align: justify;
         margin-bottom: 20px;
@@ -728,24 +759,30 @@ hr{
     
     h4{
         color: white;
+        font-size: 1.6rem;
+        
     }
-    
-    ul{
+}   
+    .tuPromo ul{
         display: flex;
-        justify-content: end;
-        align-items: end;
+        justify-content: center;
+        align-items: center;
         flex-direction: row;
+        div{
+            display: inline;
+            margin-left: 40px;
+        }
         li{
             display: block;
             color: #a69907;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
         p{
             color:#6392f7;
         }
        
     }
-}
+
 
 .detalles{
     display: flex;
@@ -798,7 +835,7 @@ hr{
 
      a{
         color: #6392f7;
-        font-size: 2rem;
+        font-size: 1.6rem;
      }
 } 
 
@@ -826,67 +863,67 @@ hr{
         }
 }
 
-@media screen and (max-width: 768px) {
-    .header {
+@media screen and (max-width: 768px){
+    .header{
         max-height: 40vh;
-        margin-top: 10px;
-        padding-top: 0;
+        margin-top: 0;
+        padding: 0;
     }
 
-    .nav1, .nav2 {
+    .nav1, .nav2{
         flex-direction: column; 
         align-items: center; 
     }
 
-    .nav1 .aico i {
+    .nav1 .aico i{
         padding: 10px; 
     }
 
-    .navul {
+    .navul{
         flex-direction: column; 
         align-items: center; 
     }
 
-    .navli {
+    .navli{
         margin-bottom: 10px; 
     }
 
-    .navlia, .navliaini {
+    .navlia, .navliaini{
         font-size: 1.2rem; 
     }
 
-    .aventuras .h1, .titulos2, .titulos3 {
+    .aventuras .h1, .titulos2, .titulos3{
         font-size: 2rem; 
     }
 
-    .formbuscar {
+    .formbuscar{
         flex-direction: column; 
         align-items: center; 
     }
 
-    .buscaventura {
+    .buscaventura{
         width: 80%; 
     }
 
-    .botonbusca {
+    .botonbusca{
         width: 50%; 
         margin-top: 10px; 
     }
 
-    .actividades .galeria {
+    .actividades .galeria{
         width: 90%; 
     }
 
-    .actividad {
+    .actividad{
         width: 45%; 
         margin-bottom: 20px; 
     }
 
-    .actividad .imgactividad {
+    .actividad .imgactividad{
         box-shadow: none; 
     }
 
-    .actividad .nombreact {
+    .actividad .nombreact{
         font-size: 1.5rem; 
     }
 
@@ -898,9 +935,12 @@ hr{
         font-size: 1rem;
     }
 
-    .footer ul {
+    .footer ul{
         flex-direction: column; 
-        align-items: center; 
+        align-items: center;
+        font-size: 1rem;
+        bottom: 0;
+        margin:0 auto;
     }
 
     .titulos2{
@@ -913,5 +953,56 @@ hr{
         overflow-x: hidden;
         max-height: 370px;
     }
+
+    .detalles{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+        h2{
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        ul li{
+            margin: 10px 40px;
+        }
+        video{
+            width: 400px;
+            justify-content: center;
+        }
+    }
+    .tabla{
+        text-align: center;
+        width: 80%;
+        thead th{
+            text-align:end;
+        }
+    }
+
+    .detallePromo{
+        flex-direction: column;
+        background-image: none;
+        img{
+            object-fit: cover;
+            width: 400px;
+        }
+        h2{
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        p{
+            text-align: justify;
+            padding: 10px;
+            
+        }
+        h4{
+            color: #495d5b;
+        }
+        ul{
+            flex-direction: column;
+            text-align: center;
+        }
+      
+    }
+    
 }
 
