@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
+//LLAMAR CON UNA FUNCION LOS ELEMENTOS DEL FORMULARIO A COMPLETAR
 const validarCampos = () => {
     resetErrorMessages();
     const email = document.getElementById("email").value.trim();
@@ -22,7 +22,7 @@ const validarCampos = () => {
     let isValid = true;
 
     
-
+//VERIFICACION DE DATOS INGRESADOS EN EL CAMPO DE EMAIL
     if (!isValidEmail(email)) {
         displayErrorMessage("emailError", "Por favor ingrese un correo electrónico válido.");
         document.getElementById("email").classList.add("is-invalid");
@@ -31,7 +31,7 @@ const validarCampos = () => {
         document.getElementById("email").classList.remove("is-invalid");
         document.getElementById("email").classList.add("is-valid");
     }
-
+//VERIFICACION DE DATOS INGRESADOS EL CAMPO DE CONTRASEÑA
     if (password.length < 8) {
         displayErrorMessage("passwordError", "La contraseña debe tener al menos 8 caracteres.");
         document.getElementById("password").classList.add("is-invalid");
@@ -41,17 +41,17 @@ const validarCampos = () => {
         document.getElementById("password").classList.add("is-valid");
         
     }
-
+//SI TODO ESTA OK, DEVUELVE:
     if (isValid) {
         alert("¡Formulario enviado correctamente!");
     }
 };
-
+//CONFORMACION DE UN EMAIL (ALGO@ALGO.COM)
 const isValidEmail = (email) => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
 };
-
+//SI EL EMAIL NO ES CORRECTO, ARROJA ERROR
 const displayErrorMessage = (elementId, message) => {
     const errorElement = document.getElementById(elementId);
     errorElement.innerText = message;
