@@ -40,7 +40,7 @@
    
 
     <main>
-        <section class="aventuras">
+        <section  id="supra" class="aventuras">
 
                 <h1 class="h1">Junín de los Andes</h1>
 
@@ -64,7 +64,21 @@
                     <input class="buscaventura" type="text" placeholder="¿Qué aventura buscas?" id="buscar" name="buscar">
                     <input class="botonbusca" type="submit" value="Buscar" >
                 </form>
-            
+                <div class="infoClima">
+                    <div class="clima">
+                        <div class="cabezaClima">
+                            <h3 class="titulos2">¿Estás por venir?</h3>
+                            <h4 class="titulos4">Así está el tiempo por estos días:</h4>
+                        </div>
+                        <div class="listaClima">
+                            <p><span class="spanItem">Ciudad:</span> <span id="city"></span></p>
+                            <p><span class="spanItem">Temperatura:</span> <span id="temperature"></span> °C</p>
+                            <p><span class="spanItem">Clima:</span> <span id="weather"></span> <img id="weatherIcon" src="" alt=""></p>
+                            <p><span class="spanItem">Humedad:</span> <span id="humidity"></span>%</p>
+                            <p><span class="spanItem">Velocidad del Viento:</span> <span id="windSpeed"></span> m/s</p>
+                        </div>
+                    </div>
+                </div>
             
 
         </section>
@@ -252,9 +266,10 @@
             <li class="fooli"><a class="foolia" href="Terminos y condiciones">Términos y condiciones</a></li>
             <li class="fooli"><a class="foolia" href="Preguntas frecuentes">Preguntas frecuentes</a></li>
             <li class="fooli"><a class="foolia" href="Administrador">Administrador del sitio</a></li>
+            <li class="botonSupra"><a href="#supra">Inicio</a></li>
         </ul>
        
     </footer>
-
+<script src="./js/climapi.js"></script>
 </body>
 </html>
